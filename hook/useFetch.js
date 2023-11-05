@@ -15,8 +15,8 @@ const options = {
     url: `https://jsearch.p.rapidapi.com/${endpoint}`,
     headers: {
     //   'X-RapidAPI-Key': rapidApiKey,
-    
-      'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
+  
+    'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
     },
     params: { ...query},
   };
