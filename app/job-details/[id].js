@@ -23,8 +23,15 @@ const JobDetails = () => {
                     title="Qualifications"
                     points={data[0].job_highlights?.Qualifications ?? ['N/A']}
                 />
-                break;
-        
+            case "About":
+                return <JobAbout
+                    info={data[0].job_description ?? "No Data Provided"}
+                />
+            case "Responsibilites":
+                return <Specifics
+                    title="Responsibilities"
+                    points={data[0].job_highlights?.Responsibilities ?? ['N/A']}
+                />
             default:
                 break;
         }
