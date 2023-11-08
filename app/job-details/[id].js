@@ -16,6 +16,20 @@ const JobDetails = () => {
     const [activeTab, setActiveTab] = useState(tabs[0])
     const onRefresh = () => {}
 
+    const displayTabContent = () => {
+        switch (activeTab) {
+            case "Qualifications":
+                return <Specifics 
+                    title="Qualifications"
+                    points={data[0].job_highlights?.Qualifications ?? ['N/A']}
+                />
+                break;
+        
+            default:
+                break;
+        }
+    }
+
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>
             <Stack.Screen options={{ 
@@ -60,6 +74,7 @@ const JobDetails = () => {
                                 activeTab={activeTab}
                                 setActiveTab={setActiveTab}
                             />
+                            {displayTabContent()}
                         </View>
                     )}
 
