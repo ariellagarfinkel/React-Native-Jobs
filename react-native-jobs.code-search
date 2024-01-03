@@ -1,0 +1,24 @@
+# Query: react_native_jobs
+# ContextLines: 1
+
+5 results - 3 files
+
+app.json:
+   9      ],
+  10:     "name": "react-native-jobs",
+  11:     "slug": "react-native-jobs"
+  12    }
+
+package-lock.json:
+  1  {
+  2:   "name": "react-native-jobs",
+  3    "version": "1.0.0",
+
+  7      "": {
+  8:       "name": "react-native-jobs",
+  9        "version": "1.0.0",
+
+package.json:
+  1  {
+  2:   "name": "react-native-jobs",
+  3    "version": "1.0.0",
