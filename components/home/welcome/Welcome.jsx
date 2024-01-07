@@ -1,11 +1,10 @@
 import { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, FlatList } from 'react-native';
 import { useRouter } from 'expo-router';
-
 import styles from './welcome.style'
 import { icons, SIZES } from '../../../constants';
 
-const jobTypes = ["Full-time", "Part-time", "Contractor", "Babysitter", "Morah", "Electrician", "lawnmower"]
+const jobTypes = ["Full-time", "Part-time", "Contractor"]
 
 const Welcome = ({ searchTerm, setSearchTerm, handleClick}) => {
   const router = useRouter();
@@ -21,8 +20,8 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick}) => {
           <TextInput 
             style={styles.searchInput} 
             value={searchTerm}
-            onChange={(text) => {setSearchTerm(text)}}
-            placeholder="What are you looking for?"
+            onChangeText={(text) => setSearchTerm(text)}
+            placeholder='What are you looking for?'
           />
         </View>
         <TouchableOpacity style={styles.searchBtn} onPress={handleClick}>
@@ -53,7 +52,7 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick}) => {
           />
       </View>
     </View>
-  )
-}
+  );
+};
 
-export default Welcome
+export default Welcome;
