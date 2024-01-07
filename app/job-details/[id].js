@@ -4,6 +4,7 @@ import { Text, View, SafeAreaView, ScrollView, ActivityIndicator, RefreshControl
 import { Company, JobAbout, JobFooter, JobTabs, ScreenHeaderBtn, Specifics } from '../../components';
 import { COLORS, icons, SIZES } from '../../constants';
 import useFetch from '../../hook/useFetch';
+import Footer from '../../components/jobdetails/footer/Footer';
 
 const tabs = ["About", "Qualifications", "Responsibilites"];
 
@@ -86,6 +87,7 @@ const JobDetails = () => {
                     )}
 
                 </ScrollView>
+                <Footer url={data[0]?.job_google_link ?? 'https://careers.google.com/jobs/results'} />
             </>
 
         </SafeAreaView>
