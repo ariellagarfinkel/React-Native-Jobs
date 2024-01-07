@@ -1,27 +1,26 @@
 import { useState, useEffect } from 'react';
 import axios from "axios";
 
-const rapidApiKey = process.env.RAPID_API_KEY;
-
 const useFetch = (endpoint, query) => {
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
 
 
-const options = {
-    method: 'GET',
-    url: `https://jsearch.p.rapidapi.com/${endpoint}`,
-    headers: {
-<<<<<<< HEAD
-    'X-RapidAPI-Key': rapidApiKey,
-=======
-      'X-RapidAPI-Key': rapidApiKey,
->>>>>>> ef29a014bf68a93e63b6ffdf9465217f1afc8605
-    'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
-    },
-    params: { ...query},
-  };
+    const options = {
+        method: 'GET',
+        url: 'https://jsearch.p.rapidapi.com/search',
+        params: {
+          query: 'Python developer in Texas, USA',
+          page: '1',
+          num_pages: '1'
+        },
+        headers: {
+          'X-RapidAPI-Key':`${process.env.RAPID_API_KEY}`,
+          'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
+        }
+      };
+      
 
 const fetchData = async () => {
     setIsLoading(true);
