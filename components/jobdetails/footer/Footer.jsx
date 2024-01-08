@@ -23,4 +23,4 @@ const Footer = ({ url }) => {
   )
 }
 
-export default Footer
+export default Footer;

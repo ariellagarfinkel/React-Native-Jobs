@@ -13,15 +13,9 @@ const Home = () => {
             <Stack.Screen options={{
                 headerStyle: { backgroundColor: COLORS.lightWhite },
                 headerShadowVisible: false,
-                headerLeft: () => (
-                    <ScreenHeaderBtn iconUrl={icons.menu} dimenion="60%" />
-                ),
-                // headerRight: () => (
-                //     <ScreenHeaderBtn iconUrl={images.profile} dimenion="60%" />
-                // ),
                 headerTitle: " "
                 }} 
-            />
+             />
             <ScrollView showsVerticalScrollIndicator={false}>
                 <View style = {{
                     flex: 1,

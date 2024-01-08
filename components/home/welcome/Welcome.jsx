@@ -4,7 +4,7 @@ import { useRouter } from 'expo-router';
 import styles from './welcome.style'
 import { icons, SIZES } from '../../../constants';
 
-const jobTypes = ["Full-time", "Part-time", "Contractor"]
+const jobTypes = ["Full-time", "Part-time", "Remote", "Hybrid", "Entry-Level", "Apprenticeship", "Residency"]
 
 const Welcome = ({ searchTerm, setSearchTerm, handleClick}) => {
   const router = useRouter();
@@ -12,8 +12,8 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick}) => {
   return (
     <View>
       <View style={styles.container}>
-        <Text style={styles.userName}> Hello </Text>
-        <Text style={styles.welcomeMessage}> Find your job </Text>
+        <Text style={styles.userName}> Hello, </Text>
+        <Text style={styles.welcomeMessage}> Find your job here </Text>
       </View>
       <View style={styles.searchContainer}>
         <View style={styles.searchWrapper}>
