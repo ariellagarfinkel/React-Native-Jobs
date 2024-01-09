@@ -14,4 +14,4 @@ const ScreenHeaderBtn = ({ iconUrl, dimension, handlePress }) => {
   );
 };
 
-export default ScreenHeaderBtn
+export default ScreenHeaderBtn;

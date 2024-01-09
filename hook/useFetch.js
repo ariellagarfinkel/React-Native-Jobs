@@ -7,15 +7,15 @@ const useFetch = (endpoint, query) => {
     const [error, setError] = useState(null);
 
 
-    const options = {
-        method: 'GET',
-        url: `https://jsearch.p.rapidapi.com/${endpoint}`,
-        headers: {
-          'X-RapidAPI-Key':`${process.env.RAPID_API_KEY}`,
-          'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
+const options = {
+    method: 'GET',
+    url: `https://jsearch.p.rapidapi.com/${endpoint}`,
+    headers: {
+        'X-RapidAPI-Key':`${process.env.RAPID_API_KEY}`,
+        'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
         },
-        params: { ...query },
-      };
+    params: { ...query },
+};
       
 
 const fetchData = async () => {
@@ -26,10 +26,10 @@ const fetchData = async () => {
 
         setData(response.data.data)
         setIsLoading(false);
-    }   catch (error) {
+    }catch (error) {
         setError(error);
         alert('There is an error')
-    }   finally {
+    }finally {
         setIsLoading(false);
     }
 };

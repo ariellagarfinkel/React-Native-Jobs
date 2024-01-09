@@ -9,7 +9,6 @@ const Nearbyjobs = () => {
   const router = useRouter();
   
   const { data, isLoading, error } = useFetch("search", { query: "Job", num_pages: "1",})
-  console.log(data);
 
   return (
     <View style={styles.container}>

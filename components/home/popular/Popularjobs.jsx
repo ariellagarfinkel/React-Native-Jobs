@@ -8,9 +8,7 @@ import useFetch from '../../../hook/useFetch';
 
 const Popularjobs = () => {
   const router = useRouter();
-  // const [searchQuery, setSearchQuery] = useState("");
   const { data, isLoading, error } = useFetch("search", { query: " Job ", num_pages: "1",});
-  console.log("data");
 
   const [selectedJob, setSelectedJob] = useState();
   const handleCardPress = (item) => {
