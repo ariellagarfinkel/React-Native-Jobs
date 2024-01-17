@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import { View, ScrollView, SafeAreaView } from 'react-native';
-import { Stack, useRouter } from 'expo-router'
+import { Stack, useRouter } from 'expo-router';
 
 import {COLORS, icons, images, SIZES } from '../constants';
-import { Nearbyjobs, Popularjobs, ScreenHeaderBtn, Welcome } from '../components'
+import { Nearbyjobs, Popularjobs, ScreenHeaderBtn, Welcome } from '../components';
+import DropdownMenu from './dropdownmenu';
 
 const Home = () => {
     const router = useRouter();
-    const [searchTerm, setSearchTerm ] = useState("")
+    const [searchTerm, setSearchTerm ] = useState("");
     const [isDropdownVisible, setIsDropdownVisible] = useState(false);
     const toggleDropdown = () => {
         setIsDropdownVisible(!isDropdownVisible);
@@ -18,11 +19,17 @@ const Home = () => {
                 headerStyle: { backgroundColor: COLORS.lightWhite },
                 headerShadowVisible: false,
                 headerLeft: () => (
-                    <ScreenHeaderBtn iconUrl={icons.menu} dimension='60%' /> ),
+                    <ScreenHeaderBtn 
+                        iconUrl={icons.menu} 
+                        dimension='60%'
+                        handlePress={toggleDropdown}
+                    />
+                     ),
 
                 headerTitle: " "
                 }} 
              />
+             <DropdownMenu isVisible={isDropdownVisible} toggleDropdown={toggleDropdown} />
             <ScrollView showsVerticalScrollIndicator={false}>
                 <View style = {{
                     flex: 1,
