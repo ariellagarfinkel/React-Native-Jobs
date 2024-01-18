@@ -14,6 +14,7 @@ const Home = () => {
         setIsDropdownVisible(!isDropdownVisible);
     };
     return (
+        <NavigationContainer>
         <SafeAreaView style ={{ flex: 1, backgroundColor: COLORS.lightWhite}}>
             <Stack.Screen options={{
                 headerStyle: { backgroundColor: COLORS.lightWhite },
@@ -50,6 +51,7 @@ const Home = () => {
                 </View>
             </ScrollView>
         </SafeAreaView>
+    </NavigationContainer>
     )
 }
 
