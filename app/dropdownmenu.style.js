@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-import { COLORS, SIZES } from "../constants";
+import { COLORS, SIZES, FONT } from "../constants";
 
 const styles = StyleSheet.create({
   btnContainer: {
@@ -18,6 +18,11 @@ const styles = StyleSheet.create({
     height: dimension,
     borderRadius: SIZES.small / 1.25,
   }),
+  btnText: {
+    fontFamily: FONT.regular,
+    fontSize: SIZES.medium,
+    color: COLORS.secondary,
+  },
 });
 
 export default styles;

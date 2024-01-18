@@ -20,13 +20,12 @@ const DropdownMenu = ({ isVisible, toggleDropdown}) => {
   return (
     <View style={{ padding: 20, display: isVisible ? 'flex' : 'none' }}>
       <TouchableOpacity onPress={toggleDropdown} style={styles.btnContainer}>
-        {/* <Text>{selectedOption || 'Select an option'}</Text> */}
       </TouchableOpacity>
 
         <View style={{ marginTop: 10, flexDirection: 'row', borderColor: 'transparent' }}>
           {options.map((option, index) => (
             <TouchableOpacity key={index} onPress={() => handleOptionSelect(option)} style={styles.btnContainer}>
-              <Text>{option}</Text>
+              <Text style={styles.btnText}>{option}</Text>
             </TouchableOpacity>
           ))}
         </View>
