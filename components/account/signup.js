@@ -60,7 +60,7 @@ const Signup = () => {
             <Text>Password Confirmation</Text>
             <TextInput
                 value={passwordConfirmation}
-                onChangeText={setpasswordConfirmation}
+                onChangeText={setPasswordConfirmation}
                 placeholder="Enter your password confirmation"
                 secureTextEntry
             />

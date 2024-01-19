@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { View, ScrollView, SafeAreaView } from 'react-native';
-import { Stack, useRouter } from 'expo-router';
-
+import { Stack, useRouter, NavigationContainer } from 'expo-router';
 import {COLORS, icons, SIZES } from '../constants';
 import { Nearbyjobs, Popularjobs, ScreenHeaderBtn, Welcome } from '../components';
 import DropdownMenu from './dropdownmenu';
@@ -30,7 +29,7 @@ const Home = () => {
                 headerTitle: " "
                 }} 
              />
-             <DropdownMenu isVisible={isDropdownVisible} toggleDropdown={toggleDropdown} />
+             <DropdownMenu navigation={navigation} isVisible={isDropdownVisible} toggleDropdown={toggleDropdown} />
             <ScrollView showsVerticalScrollIndicator={false}>
                 <View style = {{
                     flex: 1,

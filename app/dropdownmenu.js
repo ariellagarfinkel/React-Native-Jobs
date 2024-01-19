@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import styles from './dropdownmenu.style';
 import { Signup } from '../components/account/signup';
 import { Login } from '../components/account/login';
 import { Logout } from '../components/account/logout';
 import { Favorites } from '../components/account/favorites';
 
-const DropdownMenu = ({ isVisible, toggleDropdown}) => {
+const DropdownMenu = ({ isVisible, toggleDropdown, navigation}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
 
@@ -22,16 +24,16 @@ const DropdownMenu = ({ isVisible, toggleDropdown}) => {
 
   switch (option) {
     case 'Signup':
-      navigation.navigate( <Signup />); 
+      navigation.navigate( 'Signup'); 
       break;
     case 'Login':
-      navigation.navigate(<Login />); 
+      navigation.navigate('Login'); 
       break;
     case 'Logout':
-      navigation.navigate(<Logout />);
+      navigation.navigate('Logout');
       break;
     case 'Favorites':
-      navigation.navigate(<Favorites />);
+      navigation.navigate('Favorites');
       break;
     default:
       break;
