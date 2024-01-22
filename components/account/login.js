@@ -6,7 +6,7 @@ if (jwt) {
   axios.defaults.headers.common["Authorization"] = `Bearer ${jwt}`;
 }
 
-export function Login() {
+const Login = () => {
   const [errors, setErrors] = useState([]);
 
   const handleSubmit = (event) => {
@@ -48,3 +48,4 @@ export function Login() {
     </View>
   );
 }
+export default Login;
