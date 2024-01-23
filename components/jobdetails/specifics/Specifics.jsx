@@ -19,4 +19,4 @@ const Specifics = ({title, points}) => {
   )
 }
 
-export default Specifics
+export default Specifics;
