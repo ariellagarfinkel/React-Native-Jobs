@@ -42,7 +42,7 @@ const Home = () => {
                 headerTitle: " "
                 }} 
              />
-             <DropdownMenu isVisible={isDropdownVisible} toggleDropdown={toggleDropdown} />
+            <DropdownMenu navigation={navigation} isVisible={isDropdownVisible} toggleDropdown={toggleDropdown} />
             <ScrollView showsVerticalScrollIndicator={false}>
                 <View style = {{
                     flex: 1,
