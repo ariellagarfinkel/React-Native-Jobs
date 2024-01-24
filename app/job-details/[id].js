@@ -51,12 +51,12 @@ const JobDetails = () => {
                         handlePress={() => router.back() }
                     />
                 ),
-                headerRight: () => (
-                    <ScreenHeaderBtn
-                        iconUrl={icons.share}
-                        dimension="60%"
-                    />
-                ),
+                // headerRight: () => (
+                //     <ScreenHeaderBtn
+                //         iconUrl={icons.share}
+                //         dimension="60%"
+                //     />
+                // ),
                     headerTitle: " "
                 }}
 

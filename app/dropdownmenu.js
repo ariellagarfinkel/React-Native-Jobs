@@ -1,20 +1,14 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, Alert} from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import styles from './dropdownmenu.style';
-import { useNavigation } from '@react-navigation/native';
-// import { Signup } from '../components/account/signup';
-// import { Login } from '../components/account/login';
-// import { Logout } from '../components/account/logout';
-// import { Favorites } from '../components/account/favorites';
+// import { useNavigation } from '@react-navigation/native';
+// import Navigation from '../components/account/navigation';
+
 
 const DropdownMenu = ({ isVisible, toggleDropdown, navigation }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
   const options = ['Signup', 'Login', 'Logout', 'Favorites'];
-
-    // const showAlert = () => {
-    //   Alert.alert("Alert")
-    // }
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
@@ -22,8 +16,7 @@ const DropdownMenu = ({ isVisible, toggleDropdown, navigation }) => {
   const handleOptionSelect = (option) => {
     setSelectedOption(option);
     toggleDropdown();
-    console.log("work?")
-    navigation.navigate('signup')
+    // navigation.navigate('signup')
 };
 
 return (

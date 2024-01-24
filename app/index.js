@@ -1,12 +1,13 @@
 import { Redirect } from "expo-router";
-import { NavigationContainer } from "@react-navigation/native";
-import Navigation from '../components/account/navigation'
+// import { NavigationContainer } from "@react-navigation/native";
+
 
 const Index = () => {
     return (
-    <NavigationContainer>
-    <Redirect href="/home" />;
-    </NavigationContainer>
+    // <NavigationContainer>
+    // <Navigation />
+    <Redirect href="/home" />
+    // </NavigationContainer>
 )}
 
 export default Index;
